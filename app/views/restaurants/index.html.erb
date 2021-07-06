@@ -1,8 +1,21 @@
-<h1>All Restaurants</h1>
-<ul>
+<div class="container">
+  <h1>All Restaurants</h1>
   <% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant[:id]) %></li>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <%= link_to restaurant_path(restaurant[:id]) do %>
+        <div class="card-pick">
+          <img src="https://plchldr.co/i/350x160" alt="">
+          <div class="card-pick-info">
+            <h2><%= restaurant.name%> </h2>
+            <div class="restaurant-info">
+              <p><%= restaurant.category%> </p>
+              <p><%= restaurant.phone_number%> </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
-</ul>
 
-<p><%= link_to "Create a new restaurant", new_restaurant_path %></p>
+  <p><%= link_to "Create a new restaurant", new_restaurant_path %></p>
+</div>

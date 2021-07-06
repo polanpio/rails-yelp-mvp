@@ -1,0 +1,66 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.container h1 {
+  margin-bottom: 30px;
+}
+
+.card-pick {
+  /*fixed*/
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  /*customizable*/
+  height: 300px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 0px 16px rgba(0,0,0,0.3);
+}
+
+.card-pick a {
+  text-decoration: none;
+}
+
+.card-pick img {
+  /*fixed*/
+  width: 100%;
+  min-height: 100px;
+  flex-grow: 1;
+  object-fit: cover;
+  /*customizable*/
+  object-position: 50% 50%;
+  border-radius: 4px 4px 0 0;
+}
+
+.card-pick-info {
+  /*customizable*/
+  padding: 16px;
+}
+
+.card-pick-info h2 {
+  /*customizable*/
+  margin: 16px 0;
+}
+
+.card-pick:hover {
+  /*customizable*/
+  transition: 0.2s ease-out;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.restaurant-info {
+  display: flex;
+  justify-content: space-between;
+}
